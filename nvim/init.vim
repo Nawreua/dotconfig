@@ -61,6 +61,8 @@ Plug 'sirver/ultisnips'
 Plug 'ludovicchabant/vim-gutentags'
 " Tree
 Plug 'scrooloose/nerdtree'
+" Rust
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 let g:python3_host_prog='/usr/bin/python'

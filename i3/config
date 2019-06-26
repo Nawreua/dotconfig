@@ -31,6 +31,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec terminator
 
 # lock
 bindsym $mod+space exec i3lock -ec f5f5f5
@@ -81,7 +82,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+t layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -139,6 +140,13 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+## Special shortcuts
+
+# File explorer
+bindsym $mod+e exec thunar
+# QOwnNotes
+bindsym $mod+n exec QOwnNotes
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -172,5 +180,5 @@ bar {
         status_command i3status
 }
 exec --no-startup-id nm-applet
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id nitrogen --random /home/nawreua/Downloads/Wallpapers --set-auto
 exec --no-startup-id compton
