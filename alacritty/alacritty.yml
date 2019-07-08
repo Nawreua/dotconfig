@@ -2,27 +2,27 @@ alt_send_esc: true
 background_opacity: 1.0
 colors:
   bright:
-    black: 0x666666
-    blue: 0x7aa6da
-    cyan: 0x54ced6
-    green: 0x9ec400
-    magenta: 0xb77ee0
-    red: 0xff3334
-    white: 0xffffff
-    yellow: 0xe7c547
+    black: '0x666666'
+    blue: '0x7aa6da'
+    cyan: '0x54ced6'
+    green: '0x9ec400'
+    magenta: '0xb77ee0'
+    red: '0xff3334'
+    white: '0xffffff'
+    yellow: '0xe7c547'
   indexed_colors: []
   normal:
-    black: 0x04262f
-    blue: 0x268bd2
-    cyan: 0x2aa198
-    green: 0x859900
-    magenta: 0xd33682
-    red: 0xdc322f
-    white: 0xeee8d5
-    yellow: 0xb58900
+    black: '0x04262f'
+    blue: '0x268bd2'
+    cyan: '0x2aa198'
+    green: '0x859900'
+    magenta: '0xd33682'
+    red: '0xdc322f'
+    white: '0xeee8d5'
+    yellow: '0xb58900'
   primary:
-    background: 0x031d24
-    foreground: 0xeee8d5
+    background: '0x031d24'
+    foreground: '0xeee8d5'
 cursor:
   style: Block
   unfocused_hollow: true
@@ -353,13 +353,14 @@ mouse:
   url:
     launcher:
       args: []
-      program: firefox
+      program: chromium
     modifiers: None
 mouse_bindings:
   - action: PasteSelection
     mouse: Middle
-persistent_logging: false
-render_timer: false
+debug:
+  render_timer: false
+  persistent_logging: false
 scrolling:
   auto_scroll: false
   faux_multiplier: 3
@@ -371,7 +372,7 @@ selection:
 tabspaces: 8
 visual_bell:
   animation: EaseOutExpo
-  color: 0xffffff
+  color: '0xffffff'
   duration: 0
 window:
   decorations: full
@@ -382,4 +383,4 @@ window:
   padding:
     x: 2
     y: 2
-  start_maximized: false
+  startup_mode: Windowed
