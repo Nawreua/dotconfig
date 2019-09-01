@@ -32,6 +32,15 @@ if !&sidescrolloff
   set sidescrolloff=5   " Show next 5 columns while side-scrolling.
 endif
 
+" Command Alias
+fun! SetupCommandAlias(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfun
+
+call SetupCommandAlias("NoFormat", "autocmd! BufWritePre *")
+
 "  /-------------------\
 " |       PLUGINS       |
 "  \-------------------/
@@ -63,6 +72,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'scrooloose/nerdtree'
 " Rust
 Plug 'rust-lang/rust.vim'
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 let g:python3_host_prog='/usr/bin/python'
