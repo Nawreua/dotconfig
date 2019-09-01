@@ -1,0 +1,45 @@
+[theme]
+name = "solarized-dark"
+[theme.overrides]
+separator = "<span font='15'></span>"
+
+[icons]
+name = "awesome"
+[icons.overrides]
+music_prev = ""
+music_next = ""
+
+[[block]]
+block = "battery"
+driver = "upower"
+format = "{percentage}% {time}"
+
+[[block]]
+block = "sound"
+driver = "auto"
+on_click = "pavucontrol"
+
+[[block]]
+block = "bluetooth"
+mac = "F4:BC:DA:51:96:18"
+
+[[block]]
+block = "music"
+player = "spotify"
+marquee = true
+buttons = ["prev", "play", "next"]
+on_collapsed_click = "spotify"
+
+[[block]]
+block = "net"
+device = "wlp59s0"
+ssid = true
+signal_strength = true
+speed_up = false
+speed_down = false
+interval = 5
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %d/%m %R"
