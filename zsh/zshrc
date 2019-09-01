@@ -86,12 +86,23 @@ export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 export PROMPT='%F{207}%n% %F{75}@%F{207}%m% %F{75}[%F{214}%~% %F{75}]%F{75}$%f '
 export RPROMPT='${vcs_info_msg_0_}'
-export PAGER='most'
+export PAGER='less'
 export NNTPSERVER='news.epita.fr'
 #export PATH="/sbin:$PATH"
+export PATH="/home/nawreua/.cargo/bin:/home/nawreua/.local/bin/:$PATH:$HOME/go/bin"
 export EDITOR='nvim'
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 xset r rate 400 50
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /home/nawreua/Desktop/gb-studio/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/nawreua/Desktop/gb-studio/node_modules/tabtab/.completions/electron-forge.zsh
+
+# opam configuration
+test -r /home/nawreua/.opam/opam-init/init.zsh && . /home/nawreua/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+alias ssh-easy-add='eval $(ssh-agent) && ssh-add'
+alias generated_tests-lit-minimake='make ref && python generate.py ref files ../lit/generated_tests/tests.json'
