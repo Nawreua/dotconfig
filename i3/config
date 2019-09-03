@@ -21,6 +21,7 @@ set $tagSpotify 
 set $tagSlack 
 set $tagMail 
 set $tag0 
+set $tagUserCog 
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -40,6 +41,12 @@ set $tag0 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# You can also use any non-zero value if you'd like to have a border
+for_window [class=".*"] border pixel 0
+
+gaps outer 20
+gaps inner 10
+
 # start a terminal
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec terminator
@@ -51,7 +58,11 @@ bindsym $mod+space exec i3lock -ec f5f5f5
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
+
+# start rofi, a better dmenu
+bindsym $mod+d exec "rofi -theme solarized -lines 10 -padding 18 -width 60 -location 0 -modi 'run,drun,ssh' -show run -sidebar-mode"
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -114,7 +125,7 @@ bindsym $mod+3 workspace 3 $tagDoc
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
+bindsym $mod+7 workspace 7 $tagUserCog
 bindsym $mod+8 workspace 8 $tagDiscord
 bindsym $mod+9 workspace 9 $tagSpotify
 bindsym $mod+0 workspace 10 $tagSlack
@@ -126,7 +137,7 @@ bindsym $mod+Shift+3 move container to workspace 3 $tagDoc
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+7 move container to workspace 7 $tagUserCog
 bindsym $mod+Shift+8 move container to workspace 8 $tagDiscord
 bindsym $mod+Shift+9 move container to workspace 9 $tagSpotify
 bindsym $mod+Shift+0 move container to workspace 10 $tagSlack
