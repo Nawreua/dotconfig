@@ -1,28 +1,39 @@
 alt_send_esc: true
 background_opacity: 1.0
+# Colors (Solarized Dark)
 colors:
-  bright:
-    black: '0x666666'
-    blue: '0x7aa6da'
-    cyan: '0x54ced6'
-    green: '0x9ec400'
-    magenta: '0xb77ee0'
-    red: '0xff3334'
-    white: '0xffffff'
-    yellow: '0xe7c547'
-  indexed_colors: []
-  normal:
-    black: '0x04262f'
-    blue: '0x268bd2'
-    cyan: '0x2aa198'
-    green: '0x859900'
-    magenta: '0xd33682'
-    red: '0xdc322f'
-    white: '0xeee8d5'
-    yellow: '0xb58900'
+  # Default colors
   primary:
-    background: '0x031d24'
-    foreground: '0xeee8d5'
+    #background: '0x002b36' # base03
+    background: '0x002633' # base03 darker
+    foreground: '0x839496' # base0
+
+  # Cursor colors
+  cursor:
+    text:   '0x002633' # base03 darker
+    cursor: '0x839496' # base0
+
+  # Normal colors
+  normal:
+    black:   '0x073642' # base02
+    red:     '0xdc322f' # red
+    green:   '0x859900' # green
+    yellow:  '0xb58900' # yellow
+    blue:    '0x268bd2' # blue
+    magenta: '0xd33682' # magenta
+    cyan:    '0x2aa198' # cyan
+    white:   '0xeee8d5' # base2
+
+  # Bright colors
+  bright:
+    black:   '0x003d4d' # base03 lighter
+    red:     '0xcb4b16' # orange
+    green:   '0x586e75' # base01
+    yellow:  '0x657b83' # base00
+    blue:    '0x839496' # base0
+    magenta: '0x6c71c4' # violet
+    cyan:    '0x93a1a1' # base1
+    white:   '0xfdf6e3' # base3
 cursor:
   style: Block
   unfocused_hollow: true
