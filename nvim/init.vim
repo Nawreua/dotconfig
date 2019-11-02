@@ -74,6 +74,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'rust-lang/rust.vim'
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" A.vim
+Plug 'thindil/a.vim'
 call plug#end()
 
 let g:python3_host_prog='/usr/bin/python'

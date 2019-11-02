@@ -31,6 +31,16 @@ buttons = ["prev", "play", "next"]
 on_collapsed_click = "spotify"
 
 [[block]]
+block = "time"
+interval = 15
+format = "%a %d/%m %R"
+
+[[block]]
+block = "custom"
+command = "ls Downloads/Wallpapers | wc -w"
+on_click = "nitrogen --random /home/nawreua/Downloads/Wallpapers --set-auto"
+
+[[block]]
 block = "net"
 device = "wlp59s0"
 ssid = true
@@ -38,8 +48,3 @@ signal_strength = true
 speed_up = false
 speed_down = false
 interval = 5
-
-[[block]]
-block = "time"
-interval = 60
-format = "%a %d/%m %R"
