@@ -38,7 +38,6 @@ cursor:
   style: Block
   unfocused_hollow: true
 draw_bold_text_with_bright_colors: true
-dynamic_title: true
 enable_experimental_conpty_backend: false
 font:
   glyph_offset:
@@ -49,7 +48,7 @@ font:
   offset:
     x: 0
     y: 0
-  size: 12.0
+  size: 11.0
   use_thin_strokes: true
 key_bindings:
   - action: Paste
@@ -373,15 +372,13 @@ debug:
   render_timer: false
   persistent_logging: false
 scrolling:
-  auto_scroll: false
-  faux_multiplier: 3
+  multiplier: 3
   history: 10000
   multiplier: 3
 selection:
   save_to_clipboard: false
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'
-tabspaces: 8
-visual_bell:
+bell:
   animation: EaseOutExpo
   color: '0xffffff'
   duration: 0

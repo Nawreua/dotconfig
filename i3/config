@@ -52,7 +52,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec terminator
 
 # lock
-bindsym $mod+space exec i3lock -ec f5f5f5
+bindsym $mod+space exec betterlockscreen -l dimblur
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -215,5 +215,5 @@ bar {
     }
 }
 exec --no-startup-id nm-applet
-exec --no-startup-id nitrogen --random /home/nawreua/Downloads/Wallpapers --set-auto
+exec --no-startup-id nitrogen --set-auto ~/Downloads/Wallpapers/archlinux_wallpaper.png
 exec --no-startup-id compton

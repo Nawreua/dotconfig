@@ -21,6 +21,9 @@ set linespace=0
 set magic
 set foldlevel=99
 
+set exrc
+set secure
+
 " Remove trailing spaces
 autocmd BufWritePre * %s/\s\+$//e
 
